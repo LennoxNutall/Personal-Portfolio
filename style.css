@@ -400,24 +400,22 @@ section { scroll-margin-top: 9rem; }
     */
 
 /* caret */
-#type-target {
-  position: relative;
-  padding-right: 0ch;           /* space for caret */
-}
-#type-target::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 1em;
+/* keep wrapping normally; caret stays inline */
+.type-wrap { display: inline; }
+
+/* blinking caret that flows with text */
+.caret {
+  display: inline-block;
   width: 2px;
+  height: 1em;
+  margin-left: 2px;          /* a little gap from the text */
   background: aqua;
   animation: blink 1s step-end infinite;
+  vertical-align: -2px;      /* nudge to align with text (adjust if needed) */
 }
 
-@keyframes blink {
-  50% { opacity: 0; }
-}
+@keyframes blink { 50% { opacity: 0; } }
+
 
 
 @keyframes cursor{

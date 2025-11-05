@@ -26,8 +26,12 @@
             <img src="IMG_5706.jpg" alt="">
         </div>
         <div class="home-content">
-            <h1>Hello, My name is <span>Lennox</span></h1>
-            <h3 class="typing-text">I am... <span id="type-target"></span></h3>
+            <h1>Hello, My Name Is <span>Lennox</span></h1>
+            <h3 class="typing-text">I am...
+                <span id="type-wrap">
+                    <span id="type-target"></span><span class="caret" aria-hidden="true"></span>
+                </span>
+            </h3>
             <p>I am currently developing a first-person shooter, round-based zombie videogame. Much of my inspiration derives from the Call of Duty franchise where you similarly earn points from killing zombies. You can then use those points to buy new guns, unlock new parts of the map, and even purchase abilities. It is very much still in development and I am working towards adding rather more unheard of implementations to my game to give it life.</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/lennox-nutall-b54558330"><i class="fa-brands fa-linkedin"></i></a>
@@ -145,7 +149,7 @@
     </section>
     <script>
         (function() {
-            const words = ["Software Developer!", "Undergraduate Student!", "Videogame Designer!"];
+            const words = ["a Software Developer!", "an Undergraduate Student!", "a Videogame Designer!"];
             const target = document.getElementById("type-target");
 
             // typing settings
