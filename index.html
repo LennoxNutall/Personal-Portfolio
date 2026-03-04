@@ -1,250 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Lennox Nutall | Portfolio</title>
 </head>
+
 <body>
-    <header>
-        <a href="#"class="logo">Lennox Nutall</a>
+  <!-- Mobile top bar (only visible on small screens) -->
+  <div class="topbar">
+    <a class="topbar__brand" href="#home">Lennox Nutall</a>
+    <button class="topbar__toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
 
-        <nav>
-            <a href="#home"class="active">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section id="home" class="home">
+  <!-- Side Nav -->
+  <aside class="sidenav" id="sidenav">
+    <div class="sidenav__header">
+      <a href="#home" class="brand">
+        <span class="brand__name">Lennox Nutall</span>
+        <span class="brand__tag">Software • Games • CS</span>
+      </a>
+    </div>
 
-        <div class="home-img">
-            <img src="IMG_5706.jpg" alt="">
-        </div>
-        <div class="home-content">
-            <h1>Hello, My Name Is <span>Lennox</span></h1>
-            <h3 class="typing-text">I am...
-                <span id="type-wrap">
-                    <span id="type-target"></span><span class="caret" aria-hidden="true"></span>
-                </span>
-            </h3>
-            <p>I am currently developing a first-person shooter, round-based zombie videogame. Much of my inspiration derives from the Call of Duty franchise where you similarly earn points from killing zombies. You can then use those points to buy new guns, unlock new parts of the map, and even purchase abilities. It is very much still in development and I am working towards adding rather more unheard of implementations to my game to give it life.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/lennox-nutall-b54558330"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/LennoxNutall"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:LennoxCNutall@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Lennox,%20I%20saw%20your%20portfolio..."><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <a href="Lennox Nutall 2024-2025 Resume (6).pdf" class="btn"> Looking For Internships!</a>
-        </div>
+    <nav class="sidenav__nav" aria-label="Primary">
+      <a href="#home" class="navlink active"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a href="#skills" class="navlink"><i class="fa-solid fa-code"></i><span>Skills</span></a>
+      <a href="#education" class="navlink"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
+      <a href="#experience" class="navlink"><i class="fa-solid fa-briefcase"></i><span>Projects</span></a>
+      <a href="#contact" class="navlink"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
+    </nav>
 
-    </section>
+    <div class="sidenav__footer">
+      <div class="iconrow">
+        <a class="iconbtn" href="https://www.linkedin.com/in/lennox-nutall-b54558330" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a class="iconbtn" href="https://github.com/LennoxNutall" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a class="iconbtn" href="mailto:LennoxCNutall@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Lennox,%20I%20saw%20your%20portfolio..." aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <h3>Soft Skills</h3>
-        <p>Public-Speaking Communication Leadership Team-Building Conflict-Resolution Customer-Satisfaction Flexibility</p> 
-        <h3>Hard Skills</h3>
-        <p>Problem-Solving LeetCode Linux Critical-Thinking Time-Management Debugging Benchmarking Scrum Kanban</p>
-        <h3>Programming Languages/Programs</h3>
-        <p>Java C++ Python C# HTML CSS C SQL MATLAB Postman VSCode Github Linux Unity-Game-Engine</p>
+      <a class="resumeBtn" href="Lennox Nutall 2024-2025 Resume (6).pdf" target="_blank" rel="noreferrer">
+        <i class="fa-solid fa-file"></i> Resume (PDF)
+      </a>
+      <p class="tiny">© <span id="year"></span> Lennox Nutall</p>
+    </div>
+  </aside>
 
-
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <h3>Bachelor's Degree In Computer Science</h3> 
-        <p>*In-Progress* Colorado-State-Univeristy Software-Development-Concentration</p>
-        <h3>Minor Degree In Spanish</h3>
-        <p>*In-Progress* Colorado-State-University</p>
-
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="project-card">
-            <img src="ZombieGameImg.png" alt="Zombie Game Screenshot">
-            <div class="project-info">
-                <a href="https://github.com/csu-hci-projects/FA25-Duty-Walkers.git" target="_blank" class="project-title">
-                    Duty Walkers
-                </a>
-                <p>A first-person, round-based zombie game where the player is able to gain points by killing zombies to then use to purchase other weapons, abilities, or even unlock new parts of the map. Although my creation is heavily inspired by the Call of Duty Franchise, I plan on implementing rather unique game mechanics to allow a more independent identity. With all of that being said, this project is still very much in development and there is a lot of ideas to tackle.</p>
-            </div>
-        </div> 
-
-        <div class="project-card">
-            <img src="CertificateHackathon.jpg" alt="Certificate Hackathon">
-            <img src="GroupPhotoHackathon.jpg" alt="Group Photo Hackathon">
-            <img src="LidarImaging.jpg" alt="Lidar Image">
-            <img src="NormalTerrain.jpg" alt="Normal Terrain">
-            <img src="Roads.jpg" alt="Roads">
-            <div class="project-info">
-                <a href="https://github.com/USDA-OCIO-EDMC/CSU-Hackathon2025.git" target="_blank" class="project-title">
-                    Colorado State University Hackathon 2025
-                </a>
-                <p>Collaborated with a team to develop an AI model for mapping uncharted roads using high-resolution LiDAR data, including digital terrain models and hillshade imagery. Processed geospatial datasets to improve road network accuracy for Forest Service and nearby lands, and applied machine learning techniques to enhance road detection for use in forest management, wildfire response, transportation, and recreation planning. Presented the resulting algorithm to judges from NASA, Amazon, and the USDA, demonstrating strong technical skills in AI-driven geospatial analysis.</p>
-            </div>
+  <!-- Main Content -->
+  <main class="main">
+    <!-- HOME -->
+    <section id="home" class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__img">
+          <img src="IMG_5706.jpg" alt="Portrait of Lennox Nutall">
         </div>
 
-        <div class="project-card">
-            <img src="PiTerminal.jpg" alt="PiTerminal">
-            <img src="RaspberryPi.jpg" alt="RazPi">
-            <div class="project-info">
-                <a href="https://github.com/LennoxNutall/370-Soil-Moisture-Project-SP25.git" target="_blank" class="project-title">
-                    Plant Life-Line(RaspberryPi)
-                </a>
-                <p>This project focused on using a raspberry pi 4b combined with a moisture sensor to feed a plant water. The sensor would read the moisture level of the soil using voltage and send that data back to the raspberry pi. From there, the codebase would determine whether or not the plant needed water based off the moisture(voltage) level of its soil.</p>
-            </div>
-        </div>
+        <div class="hero__content">
+          <p class="eyebrow">Computer Science • Software Development • Spanish</p>
 
-        <div class="project-card">
-            <img src="t41 gps.jpg" alt="t41GPSImage">
-            <div class="project-info">
-                <a href="https://github.com/CSU-CS-314-Spring-2025/t41.git" target="_blank" class="project-title">
-                    Global Positioning System
-                </a>
-                <p>Completed a 5-month software engineering course focused on building and maintaining a production-scale web application using Agile and Scrum methodologies. Collaborated in a team development environment to write clean, testable code and implement automated tests for a mobile single-page application with RESTful API services. Utilized modern DevOps tools and CI/CD workflows to support continuous integration and deployment, and leveraged Postman to benchmark APIs by analyzing response times, payload efficiency, and status codes to identify performance bottlenecks and ensure service-level compliance.</p>
-            </div>
-        </div> 
+          <h1 class="title">
+            Hi, I’m <span class="accent">Lennox</span>.
+          </h1>
 
-        <div class="project-card">
-            <div class="project-info">
-                <a href="https://github.com/LennoxNutall/PGM-Image-Comparison.git" target="_blank" class="project-title">
-                    PGM Image Comparison
-                </a>
-                <p>Developed algorithms over a 5-month period to analyze and compare image histograms using multiple similarity measures and histogram normalization techniques across arbitrary PGM files. Implemented a perceptron-based classifier and trained it over multiple epochs to distinguish between positive and negative image samples, achieving optimal decision boundaries through iterative learning. I would like to note that there is no attatched photo because this project had nothing tangible to represent: Since I was working with creating adjusted calculations derived from spatial data sets where there were only numberical data to be outputted.</p>
-            </div>
-        </div> 
+          <h2 class="subtitle">
+            I am <span class="typewrap"><span id="type-target"></span><span class="caret" aria-hidden="true"></span></span>
+          </h2>
 
-        <div class="project-card">
-            <img src="personalPortfolio.jpg" alt="Personal Portfolio">
-            <div class="project-info">
-                <a href="https://github.com/LennoxNutall/Personal-Portfolio.git" target="_blank" class="project-title">
-                    Personal Portfolio
-                </a>
-                <p>This project is exactly what you are using to navigate through as we speak! I have never really developed a website until now, so there was so many opportunities to learn. This challenge allowed me to become acclimated with HTML, CSS, and a hint of JavaScript. It took many, many hours to become satisfied with the "finished" product and with that, tons of research to be able to make this happen. Nevertheless, I am excited and content with what I've accomplished. </p>
-            </div>
-        </div> 
+          <p class="lead">
+            I’m currently developing a first-person, round-based zombie game inspired by none other than the classic Call of Duty franchises.
+            My goal is to build unique mechanics that give the project its own identity while staying fun and digestable.
+          </p>
 
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out - I'd love to connect!</p>
-        <div class="contact-links">
-             <a href="mailto:LennoxCNutall@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Lennox,%20I%20saw%20your%20portfolio...">
-                <i class="fa-solid fa-envelope"></i> LennoxCNutall@gmail.com
+          <div class="ctaRow">
+            <a class="btn primary" href="#experience"><i class="fa-solid fa-rocket"></i> View Projects</a>
+            <a class="btn" href="Lennox Nutall 2024-2025 Resume (6).pdf" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-file"></i> Download Resume
             </a>
-            <a href="https://www.linkedin.com/in/lennox-nutall-b54558330">
-                <i class="fa-brands fa-linkedin"></i> Linkedin.com/in/Lennox-Nutall
-            </a>
-            <a href="https://github.com/LennoxNutall">
-                <i class="fa-brands fa-github"></i> Github.com/LennoxNutall
-            </a>
-            <span class="animated-text">
-                <i class="fa-solid fa-phone"></i> 317-832-5828
-            </span>
+          </div>
+
+          <div class="pillRow" aria-label="Quick highlights">
+            <span class="pill"><i class="fa-solid fa-terminal"></i> Java / C++ / Python</span>
+            <span class="pill"><i class="fa-solid fa-cubes"></i> Unity / C#</span>
+            <span class="pill"><i class="fa-solid fa-server"></i> REST / Testing / CI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="sectionHeader">
+          <h2>Skills</h2>
+          <p>Working to be better everyday.</p>
+        </header>
+
+        <div class="grid2">
+          <div class="card">
+            <h3 class="cardTitle">Core</h3>
+            <ul class="list">
+              <li>Problem-solving, debugging, benchmarking</li>
+              <li>Agile: Scrum / Kanban</li>
+              <li>Linux workflows + Git/GitHub</li>
+              <li>API testing with Postman</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="cardTitle">Soft Skills</h3>
+            <ul class="list">
+              <li>Public speaking & communication</li>
+              <li>Leadership, team-building, conflict resolution</li>
+              <li>Customer focus, flexibility</li>
+            </ul>
+          </div>
         </div>
 
+        <div class="card mt">
+          <h3 class="cardTitle">Programming & Tools</h3>
+          <div class="chips">
+            <span class="chip">Java</span><span class="chip">C++</span><span class="chip">Python</span><span class="chip">C#</span>
+            <span class="chip">C</span><span class="chip">SQL</span><span class="chip">HTML</span><span class="chip">CSS</span>
+            <span class="chip">Linux</span><span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">Unity</span>
+            <span class="chip">MATLAB</span><span class="chip">Postman</span>
+          </div>
+        </div>
+      </div>
     </section>
-    <script>
-        (function() {
-            const words = ["a Software Developer!", "an Undergraduate Student!", "a Videogame Designer!"];
-            const target = document.getElementById("type-target");
 
-            // typing settings
-            const typeSpeed = 85;      // ms per letter
-            const deleteSpeed = 95;    // ms per letter when deleting
-            const holdAfterType = 1500;   // pause after a word is fully typed
-            const holdAfterDelete = 900;  // pause after word is fully deleted
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <header class="sectionHeader">
+          <h2>Education</h2>
+          <p>Current degree progress.</p>
+        </header>
 
-            // reduced motion respect
-            const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            const TYPE = prefersReduced ? 0 : typeSpeed;
-            const ERASE = prefersReduced ? 0 : deleteSpeed;
+        <div class="grid2">
+          <div class="card">
+            <h3 class="cardTitle">B.S. Computer Science</h3>
+            <p class="muted">Colorado State University • Software Development Concentration • <span class="accent">In Progress</span></p>
+          </div>
 
-            let wordIndex = 0;
-            let charIndex = 0;
-            let deleting = false;
+          <div class="card">
+            <h3 class="cardTitle">Spanish Minor</h3>
+            <p class="muted">Colorado State University • <span class="accent">In Progress</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            function tick() {
-                const word = words[wordIndex];
+    <!-- EXPERIENCE / PROJECTS -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="sectionHeader">
+          <h2>Projects</h2>
+          <p>A few of my most gratifying projects.</p>
+        </header>
 
-                if (!deleting) {
-                // typing forward
-                charIndex++;
-                target.textContent = word.slice(0, charIndex);
+        <div class="projects">
+          <!-- Duty Walkers -->
+          <article class="project">
+            <div class="project__media">
+              <img src="ZombieGameImg.png" alt="Duty Walkers screenshot">
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <a class="project__title" href="https://github.com/csu-hci-projects/FA25-Duty-Walkers.git" target="_blank" rel="noreferrer">
+                  Duty Walkers
+                </a>
+                <div class="project__tags">
+                  <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Game Dev</span>
+                </div>
+              </div>
+              <p class="project__desc">
+                First-person, round-based zombie game where players earn points by killing zombies and spend them to buy weapons,
+                unlock areas, and purchase abilities. Inspired by classic COD-style loops, with original mechanics planned to build a unique identity.
+              </p>
+              <div class="project__links">
+                <a class="btn small" href="https://github.com/csu-hci-projects/FA25-Duty-Walkers.git" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-github"></i> Repo
+                </a>
+              </div>
+            </div>
+          </article>
 
-            if (charIndex === word.length) {
-                // full word shown
-                setTimeout(() => { deleting = true; }, holdAfterType);
-            }
+          <!-- Hackathon -->
+          <article class="project">
+            <div class="project__media gridMedia">
+              <img src="CertificateHackathon.jpg" alt="Hackathon certificate">
+              <img src="GroupPhotoHackathon.jpg" alt="Hackathon group photo">
+              <img src="LidarImaging.jpg" alt="LiDAR hillshade image">
+              <img src="NormalTerrain.jpg" alt="Terrain image">
+              <img src="Roads.jpg" alt="Road detection result">
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <a class="project__title" href="https://github.com/USDA-OCIO-EDMC/CSU-Hackathon2025.git" target="_blank" rel="noreferrer">
+                  CSU Hackathon 2025 — AI Road Mapping (LiDAR)
+                </a>
+                <div class="project__tags">
+                  <span class="tag">ML</span><span class="tag">Geospatial</span><span class="tag">Team</span>
+                </div>
+              </div>
+              <p class="project__desc">
+                Built an AI approach for mapping uncharted roads using high-resolution LiDAR-derived imagery (DTM + hillshade) and existing road networks.
+                Processed geospatial datasets to improve road detection for forest management, wildfire response, and planning.
+              </p>
+              <div class="project__links">
+                <a class="btn small" href="https://github.com/USDA-OCIO-EDMC/CSU-Hackathon2025.git" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-github"></i> Repo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Plant Life-Line -->
+          <article class="project">
+            <div class="project__media gridMedia">
+              <img src="PiTerminal.jpg" alt="Raspberry Pi terminal">
+              <img src="RaspberryPi.jpg" alt="Raspberry Pi hardware">
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <a class="project__title" href="https://github.com/LennoxNutall/370-Soil-Moisture-Project-SP25.git" target="_blank" rel="noreferrer">
+                  Plant Life-Line (Raspberry Pi)
+                </a>
+                <div class="project__tags">
+                  <span class="tag">Python</span><span class="tag">Sensors</span><span class="tag">Raspberry Pi</span>
+                </div>
+              </div>
+              <p class="project__desc">
+                Used a moisture sensor + Raspberry Pi to read soil moisture via voltage, decide watering needs, and automate plant watering.
+              </p>
+              <div class="project__links">
+                <a class="btn small" href="https://github.com/LennoxNutall/370-Soil-Moisture-Project-SP25.git" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-github"></i> Repo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- GPS -->
+          <article class="project">
+            <div class="project__media">
+              <img src="t41 gps.jpg" alt="GPS">
+            </div>
+            <div class="project__body noMedia">
+                
+              <div class="project__top">
+                <a class="project__title" href="https://github.com/CSU-CS-314-Spring-2025/t41.git" target="_blank" rel="noreferrer">
+                  Global Positioning System (Team Web App)
+                </a>
+                <div class="project__tags">
+                  <span class="tag">Agile</span><span class="tag">REST</span><span class="tag">Testing</span>
+                </div>
+              </div>
+              <p class="project__desc">
+                Built and maintained a production-scale web application using Agile/Scrum. Wrote testable code, implemented automated tests,
+                used CI/CD workflows, and benchmarked APIs with Postman to identify performance bottlenecks.
+              </p>
+              <div class="project__links">
+                <a class="btn small" href="https://github.com/CSU-CS-314-Spring-2025/t41.git" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-github"></i> Repo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PGM -->
+          <article class="project">
+            <div class="project__body noMedia">
+              <div class="project__top">
+                <a class="project__title" href="https://github.com/LennoxNutall/PGM-Image-Comparison.git" target="_blank" rel="noreferrer">
+                  PGM Image Comparison (Histograms + Perceptron)
+                </a>
+                <div class="project__tags">
+                  <span class="tag">Algorithms</span><span class="tag">ML</span><span class="tag">Java</span>
+                </div>
+              </div>
+              <p class="project__desc">
+                Implemented histogram normalization and multiple similarity measures for arbitrary PGM files. Trained a perceptron classifier across
+                epochs to separate positive/negative samples and learned decision boundaries via iterative updates.
+              </p>
+              <div class="project__links">
+                <a class="btn small" href="https://github.com/LennoxNutall/PGM-Image-Comparison.git" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-github"></i> Repo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Portfolio -->
+          <article class="project">
+            <div class="project__media">
+              <img src="personalPortfolio.jpg" alt="Portfolio preview">
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <a class="project__title" href="https://github.com/LennoxNutall/Personal-Portfolio.git" target="_blank" rel="noreferrer">
+                  Personal Portfolio Website
+                </a>
+                <div class="project__tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+                </div>
+              </div>
+              <p class="project__desc">
+                Built a responsive portfolio site from scratch. Focused on clean layout, navigation, and content clarity for job applications.
+              </p>
+              <div class="project__links">
+                <a class="btn small" href="https://github.com/LennoxNutall/Personal-Portfolio.git" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-github"></i> Repo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="sectionHeader">
+          <h2>Contact</h2>
+          <p class="hello-line">Say Hello!
+          <span class="emoji">
+          <span class="emoji-face" id="emojiFace">
+            <span class="emoji-eye left"></span>
+            <span class="emoji-eye right"></span>
+
+            <span class="mouth mouth--smile"></span>
+            <span class="mouth mouth--neutral"></span>
+            <span class="mouth mouth--frown"></span>
+        </span>
+        </span>
+        </p>
+        </header>
+
+        <div class="grid2" id="contactButtons">
+          <a class="contactCard" href="mailto:LennoxCNutall@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Lennox,%20I%20saw%20your%20portfolio...">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <div class="contactCard__title">Email</div>
+              <div class="contactCard__value">LennoxCNutall@gmail.com</div>
+            </div>
+          </a>
+
+          <a class="contactCard" href="https://www.linkedin.com/in/lennox-nutall-b54558330" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <div class="contactCard__title">LinkedIn</div>
+              <div class="contactCard__value">linkedin.com/in/lennox-nutall</div>
+            </div>
+          </a>
+
+          <a class="contactCard" href="https://github.com/LennoxNutall" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <div class="contactCard__title">GitHub</div>
+              <div class="contactCard__value">github.com/LennoxNutall</div>
+            </div>
+          </a>
+
+          <div class="contactCard" role="note" aria-label="Phone number">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <div class="contactCard__title">Phone</div>
+              <div class="contactCard__value">317-832-5828</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <script>
+    // year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // typing effect (fixed + smoother timing)
+    (function() {
+      const words = ["a Software Developer.", "an Undergraduate Student.", "a Game Developer."];
+      const target = document.getElementById("type-target");
+
+      const typeSpeed = 70;
+      const deleteSpeed = 45;
+      const holdAfterType = 1100;
+      const holdAfterDelete = 350;
+
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const TYPE = prefersReduced ? 0 : typeSpeed;
+      const ERASE = prefersReduced ? 0 : deleteSpeed;
+
+      let wordIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
+
+      function tick() {
+        const word = words[wordIndex];
+
+        if (!deleting) {
+          charIndex++;
+          target.textContent = word.slice(0, charIndex);
+          if (charIndex === word.length) {
+            setTimeout(() => { deleting = true; tick(); }, holdAfterType);
+            return;
+          }
+        } else {
+          charIndex--;
+          target.textContent = word.slice(0, charIndex);
+          if (charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            setTimeout(() => tick(), holdAfterDelete);
+            return;
+          }
         }
-        else {
-            // deleting backward
-            charIndex--;
-            target.textContent = word.slice(0, charIndex);
 
-            if (charIndex === 0) {
-                deleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                setTimeout(() => {}, holdAfterDelete);
-            }
-        }
-
-        const delay = deleting ? ERASE : TYPE;
-        setTimeout(tick, delay || 0);
-    }
-
-    // start with empty text and go
-    target.textContent = "";
-    // give a tiny initial pause so caret is visible
-    setTimeout(tick, 200);
-})();
-</script>
-
-<script>
-(() => {
-  const header = document.querySelector('header');
-  const headerH = header ? header.offsetHeight : 0;
-
-  const sections = [...document.querySelectorAll('section[id]')];
-  const links = [...document.querySelectorAll('header nav a')];
-
-  function setActive(id) {
-    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
-  }
-
-  function onScroll() {
-    // use a probe line a bit below the header
-    const probe = window.scrollY + headerH + 20;
-
-    let currentId = sections[0].id;
-    for (const sec of sections) {
-      const top = sec.offsetTop;
-      const bottom = top + sec.offsetHeight;
-      if (probe >= top && probe < bottom) {
-        currentId = sec.id;
-        break;
+        setTimeout(tick, deleting ? ERASE : TYPE);
       }
-    }
-    setActive(currentId);
-  }
 
-  // update on scroll and on load
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-  onScroll();
+      target.textContent = "";
+      setTimeout(tick, 250);
+    })();
 
-  // keep highlight correct when clicking links during smooth scroll
-  links.forEach(a => {
-    a.addEventListener('click', () => setActive(a.getAttribute('href').slice(1)));
-  });
-})();
-</script>
+    // active link highlight on scroll
+    (() => {
+      const links = [...document.querySelectorAll('.navlink')];
+      const sections = [...document.querySelectorAll('section[id]')];
 
+      function setActive(id) {
+        links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      }
+
+      function onScroll() {
+        const probe = window.scrollY + 120;
+        let currentId = sections[0]?.id || "home";
+        for (const sec of sections) {
+          const top = sec.offsetTop;
+          const bottom = top + sec.offsetHeight;
+          if (probe >= top && probe < bottom) { currentId = sec.id; break; }
+        }
+        setActive(currentId);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    })();
+
+    // mobile nav toggle
+    (() => {
+      const toggle = document.getElementById('navToggle');
+      const sidenav = document.getElementById('sidenav');
+      const overlay = document.getElementById('overlay');
+      const navLinks = [...document.querySelectorAll('.sidenav__nav a')];
+
+      function closeNav() {
+        sidenav.classList.remove('open');
+        overlay.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+
+      function openNav() {
+        sidenav.classList.add('open');
+        overlay.classList.add('show');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+
+      toggle?.addEventListener('click', () => {
+        sidenav.classList.contains('open') ? closeNav() : openNav();
+      });
+
+      overlay?.addEventListener('click', closeNav);
+      navLinks.forEach(a => a.addEventListener('click', closeNav));
+    })();
+  </script>
+
+    <script>
+        (() => {
+        const face = document.getElementById("emojiFace");
+        const contactButtons = document.getElementById("contactButtons");
+
+        const smileEl   = document.querySelector(".mouth--smile");
+        const neutralEl = document.querySelector(".mouth--neutral");
+        const frownEl   = document.querySelector(".mouth--frown");
+
+        const eyes = [...document.querySelectorAll(".emoji-eye")];
+
+        if (!face || !contactButtons || !smileEl || !neutralEl || !frownEl) return;
+
+        // ---- TUNING ----
+        const NEUTRAL_BAND = 70;  // px above cards where it's neutral
+        const FROWN_BAND   = 220; // px above cards where it becomes full frown
+        const BLEND = 60;         // px blend width (smaller = more sensitive)
+        const SMOOTH = 0.20;      // smoothing of the transitions
+        const EYE_MAX = 1.4;      // px eye tracking
+
+        const clamp = (n,a,b)=>Math.max(a,Math.min(b,n));
+        const smoothstep01 = (t)=>t*t*(3-2*t);
+
+        // smooth y to avoid jitter
+        let ySmooth = 0;
+        let init = false;
+
+        function setMouth(smile, neutral, frown){
+            // kill tiny ghosts
+            const kill = (x) => (x < 0.04 ? 0 : x);
+            smile = kill(smile); neutral = kill(neutral); frown = kill(frown);
+
+            smileEl.style.opacity = smile;
+            neutralEl.style.opacity = neutral;
+            frownEl.style.opacity = frown;
+        }
+
+        function moveEyes(x,y){
+            eyes.forEach(eye=>{
+            const r = eye.getBoundingClientRect();
+            const cx = r.left + r.width/2;
+            const cy = r.top + r.height/2;
+
+            let dx = x - cx;
+            let dy = y - cy;
+            const d = Math.hypot(dx, dy) || 1;
+            dx /= d; dy /= d;
+
+            eye.style.transform = `translate(${dx * EYE_MAX}px, ${dy * EYE_MAX}px)`;
+            });
+        }
+
+        function update(x,y){
+            const rect = contactButtons.getBoundingClientRect();
+
+            if (!init){ ySmooth = y; init = true; }
+            ySmooth = ySmooth + (y - ySmooth) * SMOOTH;
+
+            // Compute "how far above" the cards you are.
+            // inside cards => above = negative or 0
+            const above = rect.top - ySmooth; // >0 means cursor above the cards
+
+            // 1) SMILE zone: inside cards or below their top
+            // 2) NEUTRAL zone: slightly above (0..NEUTRAL_BAND)
+            // 3) FROWN zone: further above (NEUTRAL_BAND..FROWN_BAND)
+
+            // Case A: on/inside the cards => smile
+            if (above <= 0) {
+            // Blend in smile quickly as you enter
+            const t = smoothstep01(clamp((-above) / BLEND, 0, 1));
+            setMouth(1, 0, 0);
+            return;
+            }
+
+            // Case B: just above => blend smile -> neutral
+            if (above > 0 && above <= NEUTRAL_BAND) {
+            const t = smoothstep01(clamp(above / NEUTRAL_BAND, 0, 1));
+            setMouth(1 - t, t, 0);
+            return;
+            }
+
+            // Case C: further above => blend neutral -> frown
+            if (above > NEUTRAL_BAND && above <= FROWN_BAND) {
+            const t = smoothstep01(clamp((above - NEUTRAL_BAND) / (FROWN_BAND - NEUTRAL_BAND), 0, 1));
+            setMouth(0, 1 - t, t);
+            return;
+            }
+
+            // Case D: very far above => full frown
+            setMouth(0, 0, 1);
+        }
+
+        window.addEventListener("mousemove", (e) => {
+            update(e.clientX, e.clientY);
+            moveEyes(e.clientX, e.clientY);
+        }, { passive:true });
+
+        })();
+    </script>
 </body>
 </html>
